@@ -1,0 +1,599 @@
+/* ============================================
+   RESET E VARIÁVEIS
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #007bff;
+    --whatsapp: #25d366;
+    --dark: #1a1a1a;
+    --gray: #666;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5b;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 160px 0 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #ffd700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--whatsapp);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1ebe5b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-grande {
+    padding: 20px 50px;
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   SEÇÕES GENÉRICAS
+   ============================================ */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background: var(--light-gray);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   DESTINOS (HU09)
+   ============================================ */
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.destino-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.destino-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.destino-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.destino-card p {
+    color: var(--gray);
+}
+
+/* ============================================
+   SERVIÇOS (HU10 + HU11)
+   ============================================ */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.servico-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.servico-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.servico-lista {
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.servico-lista li {
+    padding: 8px 0;
+    color: var(--gray);
+    border-bottom: 1px solid #eee;
+}
+
+/* ============================================
+   VANTAGENS (HU05 + HU06)
+   ============================================ */
+.vantagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.vantagem-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.vantagem-item:hover {
+    transform: translateY(-5px);
+}
+
+.vantagem-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.vantagem-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.vantagem-item p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   PREÇOS (HU12)
+   ============================================ */
+.precos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.preco-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.preco-card.destaque {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.preco-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+.preco-valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.preco-valor span {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: normal;
+}
+
+.preco-card p {
+    color: var(--gray);
+}
+
+.pagamento {
+    text-align: center;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.pagamento h4 {
+    margin-bottom: 20px;
+}
+
+.pagamento-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pagamento-icons span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.pagamento-icons i {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   MOTORISTA (HU01 + HU02)
+   ============================================ */
+.motorista-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.motorista-foto img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.motorista-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.motorista-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.motorista-experiencia {
+    background: #fff3cd;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #856404;
+    font-weight: 600;
+}
+
+.motorista-features {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.motorista-features li {
+    padding: 8px 0;
+    color: var(--gray);
+}
+
+.motorista-features i {
+    color: var(--whatsapp);
+    margin-right: 10px;
+}
+
+/* ============================================
+   GALERIA (HU13 + HU14)
+   ============================================ */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.galeria-item {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.galeria-item:hover {
+    transform: scale(1.03);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ============================================
+   AVALIAÇÕES (HU15 + HU03 + HU16)
+   ============================================ */
+.avaliacao-media {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.estrelas {
+    color: #ffc107;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.avaliacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.avaliacao-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.avaliacao-card p {
+    font-style: italic;
+    margin: 15px 0;
+    color: var(--gray);
+}
+
+.avaliacao-autor {
+    display: block;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.avaliacao-data {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* ============================================
+   FAQ (HU08)
+   ============================================ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-pergunta {
+    width: 100%;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-pergunta:hover {
+    background: var(--light-gray);
+}
+
+.faq-pergunta i {
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-pergunta i {
+    transform: rotate(180deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 25px;
+}
+
+.faq-item.active .faq-resposta {
+    max-height: 200px;
+    padding: 0 25px 20px;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.cta-final {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-final h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
