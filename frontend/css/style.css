@@ -16,7 +16,11 @@
     --white: #ffffff;
     --shadow: 0 4px 15px rgba(0,0,0,0.1);
     --transition: all 0.3s ease;
-    --destaque: #00024B;
+    --destaque: #F59E0B;
+    /*--destaque: #00024B;*/
+    --bg-main: #efefff;
+    --whatsapp-hover: #1ebe5b;
+    --bg-bottom-footer: #111;
 }
 
 body {
@@ -24,7 +28,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #efefff;
+    background-color: var(--bg-main);
 }
 
 .container {
@@ -43,7 +47,8 @@ body {
     background: var(--white);
     box-shadow: var(--shadow);
     z-index: 1000;
-    padding: 15px 0;
+    /*padding: 15px 0;*/
+    padding: 5px 0;
 }
 
 .header-content {
@@ -55,7 +60,11 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    /*height: 55px;*/
+    width: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav {
@@ -65,13 +74,13 @@ body {
 
 .nav a {
     text-decoration: none;
-    color:var(--primary);
+    color: var(--primary);
     font-weight: 500;
     transition: var(--transition);
 }
 
-.nav a:active {
-    color: var(--primary);
+.nav a:hover {
+    color: var(--dark);
 }
 
 .btn-whatsapp {
@@ -88,7 +97,7 @@ body {
 }
 
 .btn-whatsapp:hover {
-    background: #1ebe5b;
+    background: var(--whatsapp-hover);
     transform: translateY(-2px);
 }
 
@@ -96,8 +105,8 @@ body {
    HERO SECTION
    ============================================ */
 .hero {
-    background:#0056b3;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
     padding: 160px 0 100px;
     text-align: center;
 }
@@ -106,20 +115,17 @@ body {
     font-size: 2.8rem;
     margin-bottom: 20px;
     line-height: 1.2;
-}
-
-.hero h1{
-    color: white;
+    color: var(--white);
 }
 
 .hero h1 span {
-    color: white;
+    /*color: var(--destaque);*/
+    color: var(--destaque);
 }
 
-
-
 .hero p {
-    color: #00024B;
+    /*color: #00024B;*/
+    color: var(--white);
     font-size: 1.2rem;
     margin-bottom: 30px;
     max-width: 700px;
@@ -136,7 +142,7 @@ body {
 
 .btn-primary {
     background: var(--whatsapp);
-    color: white;
+    color: var(--white);
     padding: 15px 35px;
     border-radius: 50px;
     text-decoration: none;
@@ -151,14 +157,14 @@ body {
 }
 
 .btn-primary:hover {
-    background: #1ebe5b;
+    background: var(--whatsapp-hover);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
+    color: var(--white);
     padding: 15px 35px;
     border-radius: 50px;
     text-decoration: none;
@@ -168,8 +174,8 @@ body {
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #0056b3;
+    background: var(--white);
+    color: var(--primary);
 }
 
 .btn-grande {
@@ -598,8 +604,8 @@ body {
    CTA FINAL
    ============================================ */
 .cta-final {
-    background:#0056b3;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
     text-align: center;
     padding: 80px 0;
 }
@@ -616,7 +622,7 @@ body {
 */
 
 .footer {
-    background: #1a1a1a;
+    background: var(--dark);
     color: #ccc;
     padding: 50px 0 0;
 }
@@ -629,7 +635,7 @@ body {
 }
 
 .footer-col h4 {
-    color: white;
+    color: var(--white);
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
@@ -642,11 +648,22 @@ body {
 }
 
 .footer-col i {
+    color: var(--white);
+}
+
+.footer-col p a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col p a:hover {
     color: var(--primary);
+    text-decoration: underline;
 }
 
 .footer-bottom {
-    background: #111;
+    background: var(--bg-bottom-footer);
     padding: 20px 0;
     text-align: center;
     font-size: 0.9rem;
@@ -661,7 +678,7 @@ body {
     bottom: 30px;
     right: 30px;
     background: var(--whatsapp);
-    color: white;
+    color: var(--white);
     width: 60px;
     height: 60px;
     border-radius: 50%;
