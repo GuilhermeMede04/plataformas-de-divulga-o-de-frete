@@ -353,7 +353,20 @@ body {
     text-align: justify;
 }
 
-.container-preco{
+.preco-info { /*obs*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 900px;
+    margin: 40px auto 20px;
+    padding: 30px 35px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+/*.container-preco{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -382,12 +395,6 @@ body {
     background: var(--whatsapp-hover);
     transform: translateY(-2px);
 }
-
-
-
-
-
-
 
 .preco-card {
     background: var(--white);
@@ -457,7 +464,118 @@ body {
 .pagamento-icons i {
     color: var(--primary);
     font-size: 1.3rem;
+}*/
+
+
+/* Container que organiza pagamentos e botão lado a lado */
+.preco-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 900px;
+    margin: 40px auto 20px;
+    padding: 30px 35px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
 }
+
+/* Área de pagamentos */
+.pagamento {
+    flex: 0 1 auto;
+    text-align: left;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.pagamento h4 {
+    margin: 0 0 22px;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Ícones e nomes dos pagamentos */
+.pagamento-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.pagamento-icons span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.pagamento-icons i {
+    color: var(--primary);
+    font-size: 1.35rem;
+}
+
+/* Linha divisória entre o formas de pagamentos e o botão wpp */
+.preco-divider {
+    width: 1px;
+    align-self: stretch;
+    min-height: 65px;
+    background: #dce2eb;
+}
+
+/* Container do botão */
+.container-preco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+/* Botão do WhatsApp */
+.btn-preco-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 210px;
+    min-height: 58px;
+    padding: 15px 28px;
+    box-sizing: border-box;
+
+    background: var(--whatsapp);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+
+    transition: var(--transition);
+}
+
+.btn-preco-info i {
+    font-size: 1.5rem;
+}
+
+.btn-preco-info:hover {
+    background: var(--whatsapp-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+}
+
+.btn-preco-info:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
 
 /* ============================================
    MOTORISTA (HU01 + HU02)
@@ -544,108 +662,6 @@ body {
     text-align: center;
     font-weight: 500;
 }
-
-/* ============================================
-   AVALIAÇÕES (HU15 + HU03 + HU16)
-   ============================================ */
-/*.avaliacao-media {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.estrelas {
-    color: #ffc107;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.avaliacoes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.avaliacao-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    position: relative;
-}
-
-.avaliacao-card p {
-    font-style: italic;
-    margin: 15px 0;
-    color: var(--gray);
-}
-
-.avaliacao-autor {
-    display: block;
-    font-weight: 600;
-    color: var(--dark);
-}
-
-.avaliacao-data {
-    display: block;
-    font-size: 0.85rem;
-    color: #999;
-    margin-top: 5px;
-}*/
-
-/* ============================================
-   FAQ (HU08)
-   ============================================ */
-/*.faq-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: var(--white);
-    border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.faq-pergunta {
-    width: 100%;
-    padding: 20px 25px;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.faq-pergunta:hover {
-    background: var(--light-gray);
-}
-
-.faq-pergunta i {
-    transition: var(--transition);
-}
-
-.faq-item.active .faq-pergunta i {
-    transform: rotate(180deg);
-}
-
-.faq-resposta {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 25px;
-}
-
-.faq-item.active .faq-resposta {
-    max-height: 200px;
-    padding: 0 25px 20px;
-}*/
 
 /* ============================================
    CTA FINAL
@@ -854,6 +870,43 @@ body {
         height: 55px;
         font-size: 1.7rem;
     }
+
+    .preco-info {
+        flex-direction: column;
+        gap: 25px;
+        margin: 30px 15px 15px;
+        padding: 28px 20px;
+    }
+
+    .pagamento {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pagamento h4 {
+        margin-bottom: 18px;
+    }
+
+    .pagamento-icons {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .preco-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 0;
+        align-self: auto;
+    }
+
+    .container-preco {
+        width: 100%;
+    }
+
+    .btn-preco-info {
+        width: 100%;
+        max-width: 280px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -868,5 +921,18 @@ body {
 
     .btn-primary, .btn-secondary {
         justify-content: center;
+    }
+
+    .pagamento-icons {
+        gap: 14px;
+    }
+
+    .pagamento-icons span {
+        gap: 5px;
+        font-size: 0.9rem;
+    }
+
+    .pagamento-icons i {
+        font-size: 1.15rem;
     }
 }

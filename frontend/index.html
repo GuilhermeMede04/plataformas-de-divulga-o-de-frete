@@ -6,6 +6,7 @@
     <meta name="description" content="Serviço de frete de Piripiri para Teresina. Ágil, confortável e seguro. Transporte de pessoas e produtos.">
     <title>Assis da Van | Transporte Ágil e Confortável</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -19,10 +20,6 @@
                 <a href="#destinos">Destinos</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#precos">Preços</a>
-                <!-- 
-                <a href="#avaliacoes">Avaliações</a>
-                <a href="#faq">FAQ</a>
-                -->
                 
             </nav>
             <!-- HU19 + HU22 ==> Botão WhatsApp com mensagem predefinida -->
@@ -61,13 +58,6 @@
                     <h3>Piripiri ↔ Teresina</h3>
                     <p>Rota principal com saídas diárias</p>
                 </div>
-                <!--
-                <div class="destino-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Teresina → Piripiri</h3>
-                    <p>Retorno no mesmo dia</p>
-                </div>
-                -->
                 <div class="destino-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Outros destinos do Piauí</h3>
@@ -145,52 +135,30 @@
 
     <!-- HU12: PREÇOS -->
     <section id="precos" class="section section-alt">
-
-
         <div class="container">
             <h2 class="section-title">Quanto custa?</h2>
             <p class="section-subtitle">Preços transparentes e justos</p>
             
-          <div class="container-preco">
+            <div class="preco-info"> 
+                <div class="container-preco">
 
-              <div class="preco-card">
-                  <a href="https://wa.me/5586999431061?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte." 
-                  class="btn-preco-info" target="_blank" rel="noopener">
-                  <i class="fab fa-whatsapp"></i> A combinar
-                </a>
-        </div> 
-    </div>
-        
-
-
-
-            <!-- <div class="precos-grid">
-                <div class="preco-card">
-                    <h3>Piripiri → Teresina</h3>
-                    <div class="preco-valor">R$ 00<span>/pessoa</span></div>
-                    <p>Ida simples</p>
+                    <div class="preco-card">
+                    <a href="https://wa.me/5586999431061?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte." 
+                    class="btn-preco-info" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> A combinar</a>
+                    </div> 
                 </div>
-                <div class="preco-card destaque">
-                    <h3>Ida e Volta</h3>
-                    <div class="preco-valor">R$ 00<span>/pessoa</span></div>
-                    <p>Economia de R$ 00</p>
+                <div class="preco-divider"></div> 
+                <!-- HU12: Formas de pagamento -->
+                <div class="pagamento">
+                    <h4>Formas de pagamento aceitas:</h4>
+                    <div class="pagamento-icons">
+                        <span><i class="fas fa-money-bill"></i> Dinheiro</span>
+                        <span><i class="fas fa-qrcode"></i> PIX</span>
+                        <span><i class="fas fa-credit-card"></i> Cartão</span>
+                    </div>
                 </div>
-                <div class="preco-card">
-                    <h3>Encomendas</h3>
-                    <div class="preco-valor">A partir de R$ 00</div>
-                    <p>Dependendo do volume</p>
-                </div>
-            </div> -->
-            
-            <!-- HU12: Formas de pagamento -->
-            <div class="pagamento">
-                <h4>Formas de pagamento aceitas:</h4>
-                <div class="pagamento-icons">
-                    <span><i class="fas fa-money-bill"></i> Dinheiro</span>
-                    <span><i class="fas fa-qrcode"></i> PIX</span>
-                    <span><i class="fas fa-credit-card"></i> Cartão</span>
-                </div>
-            </div>
+            </div> 
         </div>
     </section>
 
@@ -198,16 +166,16 @@
     <section id="motorista" class="section">
         <div class="container motorista-content">
             <div class="motorista-foto">
-                <img src="img/motorista.jpg" alt="Foto do motorista">
+                <img src="images/logo.jpeg" alt="Foto do motorista">
             </div>
             <div class="motorista-info">
                 <h2>Sobre mim</h2>
                 <h3>Assis da Van</h3>
                 <p class="motorista-experiencia">
-                    <i class="fas fa-award"></i> 8 anos de experiência
+                    <i class="fas fa-award"></i> Desde 2017
                 </p>
                 <p class="descricao">
-                    Há mais de 8 anos realizando viagens entre Piripiri e Teresina, 
+                    Desde 2017 realizando viagens entre Piripiri e Teresina, 
                     sempre com compromisso, pontualidade e segurança. Meu objetivo é 
                     proporcionar uma viagem tranquila e confortável para todos os passageiros.
                 </p>
@@ -242,101 +210,6 @@
             </div>
         </div>
     </section>
-
-    <!-- HU15 + HU03: AVALIAÇÕES ==> Exemplo de como é para ficar a seção de avaliações -->
-    <!--
-    <section id="avaliacoes" class="section">
-        <div class="container">
-            <h2 class="section-title">O que dizem os passageiros</h2>
-            
-            HU03: Avaliação média 
-            <div class="avaliacao-media">
-                <div class="estrelas">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p><strong>4.8</strong> de 5 estrelas (baseado em 127 avaliações)</p>
-            </div>
-            
-             HU15: Comentários 
-            <div class="avaliacoes-grid">
-                <div class="avaliacao-card">
-                    <div class="estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Viagem tranquila, motorista muito educado. Recomendo!"</p>
-                    <span class="avaliacao-autor">— Maria Santos</span>
-                    HU16: Data da avaliação 
-                    <span class="avaliacao-data">15/08/2026</span>
-                </div>
-                <div class="avaliacao-card">
-                    <div class="estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Enviei uma encomenda e chegou no prazo. Excelente serviço!"</p>
-                    <span class="avaliacao-autor">— Carlos Oliveira</span>
-                    <span class="avaliacao-data">10/08/2026</span>
-                </div>
-                <div class="avaliacao-card">
-                    <div class="estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <p>"Carro confortável e limpo. Só achei que demorou um pouco."</p>
-                    <span class="avaliacao-autor">— Ana Costa</span>
-                    <span class="avaliacao-data">05/08/2026</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
-
-    <!-- HU08: FAQ ==> falta colocar as respostas -->
-    <!--
-    <section id="faq" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-pergunta">
-                        Qual o horário de saída?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-resposta">
-                        <p>As saídas ocorrem diariamente às 6h e às 14h.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-pergunta">
-                        Posso levar bagagem?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-resposta">
-                        <p>Sim! Cada passageiro pode levar uma mala de até 20kg.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-pergunta">
-                        Vocês transportam animais?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-resposta">
-                        <p>Sim, desde que em caixa de transporte adequada.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- FINAL -->
     <section class="cta-final">
@@ -391,7 +264,5 @@
        class="whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- script src="js/script.js"></script -->
 </body>
 </html>
